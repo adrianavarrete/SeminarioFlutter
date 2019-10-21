@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seminario/CardSeminario.dart';
 
 class SecondScreen extends StatelessWidget {
   @override
@@ -8,19 +9,19 @@ class SecondScreen extends StatelessWidget {
         title: Text('Hola EA!'),
       ),
       body: Card(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              Card(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Card(
                 child: ListTile(
-                  leading: FlutterLogo(size:72.0),
-                  title: Text('Hola!'),
-                  subtitle: Text('Esto es una prueba para el seminario'),
-                  isThreeLine: true,
-                ),
-              )
-            ],
-          ),
+              leading: FlutterLogo(size: 72.0),
+              title: Text('Esto es un ejemplo de un Card'),
+              subtitle: Text('This is a test'),
+              isThreeLine: true,
+            ))
+            //CardSeminario('Gracias por asistir!')
+          ],
+        ),
       ),
     );
   }
