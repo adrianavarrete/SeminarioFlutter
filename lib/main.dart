@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seminario/SecondScreen.dart';
 
 void main() => runApp(MyApp());
 
@@ -41,8 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: 
-        Column(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
@@ -52,10 +52,18 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.display1,
             ),
+            RaisedButton(
+              child: Text('Go!'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SecondScreen()),
+                );
+              },
+            ),
           ],
         ),
       ),
-      
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
